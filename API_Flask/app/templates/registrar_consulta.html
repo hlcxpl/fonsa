@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Consulta</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+</head>
+<body>
+    <h1>Registrar Consulta</h1>
+    <form method="post" action="{{ url_for('registrar_consulta') }}">
+        <!-- Agrega los campos necesarios para la consulta -->
+        <label for="nombre_especialista">Nombre del Especialista:</label>
+        <input type="text" name="nombre_especialista" placeholder="Jhon Doe" required> <br>
+
+        <label for="tipo_consulta">Tipo de Consulta:</label>
+        <select name="tipo_consulta" title="select" required>
+            <option value="pediatra">Pediatra</option>
+            <option value="cgi">CGI</option>
+            <option value="urgencias">Urgencias</option>
+        </select><br>
+
+        <input type="submit" value="Registrar Consulta">
+    </form>
+</body>
+</html>

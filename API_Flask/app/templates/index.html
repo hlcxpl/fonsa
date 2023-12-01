@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+</head>
+<body>
+    <h1>Welcome to Hospital Management</h1>
+
+    <h2>Register New Patient</h2>
+    <form action="{{ url_for('register_patient') }}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br>
+
+        <label for="history_number">History Number:</label>
+        <input type="text" id="history_number" name="history_number" required><br>
+
+        <label for="weight_height">Weight/Height:</label>
+        <input type="text" id="weight_height" name="weight_height" placeholder="e.g., 70/1.75" ><br>
+
+        <label for="smoker">Smoker:</label>
+        <select id="smoker" name="smoker">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+        </select><br>
+
+        <label for="years_smoking">Years of Smoking:</label>
+        <input type="number" id="years_smoking" name="years_smoking"><br>
+
+        <label for="has_diet">Has Diet:</label>
+        <select id="has_diet" name="has_diet">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+        </select><br>
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
